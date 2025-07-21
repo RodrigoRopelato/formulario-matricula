@@ -27,8 +27,6 @@
 }
 
 body{
-  overflow: hidden;
-
   font: var(--text);
   color: var(--text-secundary);
 }
@@ -45,10 +43,24 @@ img{
   display: flex;
 }
 
-.flex-1 {
-  flex: 1;
+.desktop-only{
+  display: none;
+}
+
+@media (width >= 80em) {
+  .desktop-only{
+  display: initial;
+}
+
+body{
+    overflow: hidden;
 }
 
 .flex-2 {
   flex: 2;
+}
+
+.flex-1 {
+  flex: 1;
+}
 }
